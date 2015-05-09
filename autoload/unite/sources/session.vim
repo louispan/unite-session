@@ -283,8 +283,7 @@ endfunction"}}}
 let s:source_new.action_table.save = s:source.action_table.save
 function! s:source_new.action_table.save.func(candidates) "{{{
   for candidate in a:candidates
-      " Second argument means check if exists
-      call unite#sources#session#_save(candidate.word, 1) 
+      call unite#sources#session#_save(candidate.word)
       close
   endfor
 endfunction"}}}
